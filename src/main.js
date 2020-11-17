@@ -83,9 +83,9 @@ function handleCollisions() {
     for (let i = 0; i < obstaclesArray.length; i++) {
         if (bird.x < obstaclesArray[i].x + obstaclesArray[i].width && bird.x + bird.width > obstaclesArray[i].x && ((bird.y < 0 + obstaclesArray[i].top && bird.y + bird.height > 0 || (bird.y > canvas.height - obstaclesArray[i].bottom && bird.y + bird.height < canvas.height)))) {
             ctx.drawImage(bang, bird.x, bird.y, 50, 50);
-            ctx.font = "20px Georgia";
+            ctx.font = "1rem Georgia";
             ctx.fillStyle = "#f2f2f2";
-            ctx.fillText(` You have Died in:${returnEpisodeName(score)}`, 20, canvas.height / 2 - 10)
+            ctx.fillText(` You have Died in:${returnEpisodeName(score)}`, 10, canvas.height / 2 - 10)
             myAudio.pause()
             return true;
         }
